@@ -1,0 +1,1 @@
+var Hamburger=document.getElementById("hamburger");Hamburger.addEventListener("click",function(){document.getElementById("hidden-nav").classList.toggle("Show__Nav")});

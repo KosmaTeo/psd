@@ -1,11 +1,52 @@
+*, *::after, *::before { margin: 0; padding: 0; box-sizing: border-box;}
+html {height: 100%;}
 body {
-    background-color: #ababab;
+    background-color: #4caf50;
     display: flex;
     justify-content: center;
     align-items: center;
+    height: 100%;
+    color: #ffffff;
+}
+
+a:link {
+    color: #ffffff;
+    text-decoration: none;
+}
+a:visited {
+    color: #ffffff;
+    text-decoration: none; 
+}
+a:hover {
+    color: #ffffff;
+    text-decoration: none;  
 }
 
 .wrapper {
     background-color: #efefef;
-    border: 1px solid #333333
+    box-shadow: 0 0 10px 10px rgba(0,0,0,0.3);
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    
+}
+
+
+.Container {
+    margin: 10px;
+    padding: 15px;
+    background-color: rgba(0,200,50, 0.3);
+}
+
+.LinkThisTab {
+    background-color: #4caf50;
+    padding: 5px;
+}
+
+
+.LinkNewTab {
+    background-color: #4caf50;
+    padding: 5px;
 }

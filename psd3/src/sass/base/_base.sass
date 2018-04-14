@@ -10,7 +10,7 @@ body
     font-family: 'Montserrat', Verdana, sans-serif
     background-color: #eff2f6
     font-weight: 400
-    
+  
 a:link 
     text-decoration: none
     color: inherit
@@ -23,6 +23,7 @@ a:focus
 a:active
     color: inherit
 
+    
 .text-alert
     color: #ee4433
     text-shadow: 0 0 1px #ff343d
@@ -39,6 +40,7 @@ a:active
     
 .btn:hover
     background-color: rgba(255,255,255, 0.8)
+    
 .wrapper
     max-width: 1250px
     width: 100%
@@ -46,6 +48,7 @@ a:active
     margin: 0 auto
     
 .Start
+    max-width: 1250px
     width: 100%
     min-height: 650px
     display: flex
@@ -57,6 +60,7 @@ a:active
     min-height: 100%
     background-color: #ff343d
     overflow: hidden
+    position: relative
     
 .Start_M__h1
     color: #ff343d
@@ -77,6 +81,7 @@ a:active
     top: 30px
     left: 30px
     right: 90px
+    z-index: 11
     display: flex
     justify-content: space-between
     
@@ -130,7 +135,48 @@ a.Start_M-C__BuyNow
     margin-right: 30px
     font-weight: 700
     font-size: 1.2rem
+  
     
+//        Show Menu
+
+.Start__Nav
+    width: 100vw
+    height: 100vh
+    background-color: #333333
+    position: fixed
+    left: 0
+    top: -200vh
+    z-index: 10
+    transition: top .5s ease-in-out
+.Start_N__ul
+    color: #ffffff
+    font-size: 3rem
+    list-style-type: none
+    margin-top: 100px
+    display: flex
+    flex-direction: column
+    justify-content: flex-start
+    align-items: center
+    
+.Start_N-U__li
+    padding: 4vh
+    min-width: 170px
+    text-align: center
+    
+.Start_N-U__li:hover
+    background: #333333 url('../images/drone-icon.png') no-repeat
+    background-size: 40%
+    animation: drone-fly 1s linear 0s infinite alternate
+    
+@keyframes drone-fly
+    0%
+        background-position: left bottom
+    
+    100%
+        background-position: right top
+    
+.show
+    top: 0
     
 .Start__DroneContainer
     width: 400px
@@ -148,8 +194,8 @@ a.Start_M-C__BuyNow
     
 .Start_D__Drone
     position: absolute
-    width: 630px
-    height: 420px
+    width: 160%
+    height: 160%
     background-image: url('../images/drone-photo.png')
     background-repeat: no-repeat
     background-position: center
@@ -164,7 +210,7 @@ a.Start_M-C__BuyNow
     justify-content: flex-start
     align-items: flex-start
     display: flex
-    flex-direction: row
+
        
 .Start_S__Slide
     margin-top: 50px
@@ -197,6 +243,8 @@ a.Start_M-C__BuyNow
     cursor: pointer
     font-size: 1.2rem
     text-shadow: 0 0 1px #000000
+    
+
 
     
 //        TAP TO FLY
@@ -235,11 +283,12 @@ a.Start_M-C__BuyNow
     background-image: url('../images/ground-photo.png')
     background-size: cover
     position: relative
+    height: 400px
     
 .TapToFly_F__Overlay
     position: absolute
     height: 100%
-    width: 400px
+    width: 50%
     color: #ffffff
     font-size: 2rem
     background-color: rgba(0,0,0,0.7)
@@ -262,6 +311,7 @@ a.Start_M-C__BuyNow
     background-color: #ffffff
     text-align: center
     padding: 60px 20px
+    
 .Features--Header
     font-size: 2rem
     text-shadow: 0 0 1px #000000
@@ -280,6 +330,8 @@ a.Start_M-C__BuyNow
     height: 100%
     justify-content: space-between
     text-shadow: 0 0 1px #000000
+    width: 230px
+    padding: 30px
 
 .Feature__img
     margin-bottom: 40px
@@ -287,18 +339,19 @@ a.Start_M-C__BuyNow
 // NEVGEN
 
 .NewGen
-    min-height: 400px
+    //min-height: 400px
     display: flex
 
 .NewGen__img
     width: 50%
+    height: auto
     
 .NewGen__Text
     width: 50%
     background-color: #232323
     background-image: url('../images/drone-icon.png')
     background-repeat: no-repeat
-    background-position: right -130px center
+    background-position: right -50% center
     background-size: 50%
     display: flex
     flex-direction: column
@@ -311,6 +364,7 @@ a.Start_M-C__BuyNow
     font-size: 5rem
     color: #ffffff
     margin-bottom: 40px
+    padding-right: 20px
     
 .NewGen_T__btn, .NewGen_T__btn:visited, .NewGen_T__btn:hover
     background-color: transparent
@@ -350,6 +404,7 @@ a.Start_M-C__BuyNow
     justify-content: flex-end
     align-items: center
     padding-bottom: 130px
+    
 .Journey__h2
     font-size: 6rem
     color: #ffffff
@@ -398,4 +453,200 @@ a.Start_M-C__BuyNow
     background-color: #ffffff
     
     
+@include mw1180
     
+    .Start
+        min-height: 900px
+    
+    .Start_M__h1
+        display: none
+        
+    .Start__MarsAbsolute
+        width: 50%
+        
+    .Start__DroneContainer
+        left: calc(50% - 200px)
+        top: 400px
+        
+    .Start__SliderScroll
+        left: 0
+        top: 150px
+        width: 50%
+        
+    .Start_S__Slide
+        margin-top: 0
+        
+@include mw980
+    
+    .NewGen_T__p
+        font-size: 2rem
+        
+    .NewGen-2
+        padding-left: 30px
+        
+    .Start__DroneContainer
+        margin-top: 30px
+        left: calc(50% - 150px)
+        width: 300px
+        height: 300px
+        
+    .TapToFly_F__Overlay
+        width: 60%
+        
+    .TapToFly_H__h2, .TapToFly_H__p
+        width: 100%
+        padding-left: 30px
+        
+    .Journey
+        background-position: left 50% bottom 33%
+        
+    .Journey__h2
+        font-size: 5rem
+        
+@include mw680
+    
+    .Start__Menu
+        right: 20px
+        left: 20px
+        
+    .Start_M-C__phoneNumber
+        margin-left: 0
+        
+    .Start_M__Container:first-child
+        flex-direction: column
+        
+    .Start_M-C__BuyNow, .Start_M-C__Hamburger
+        background-color: #ff343d
+        padding: 20px
+        background-position: center
+        height: 40px
+        padding-top: 0
+        padding-bottom: 0
+        line-height: 40px
+
+        
+    .Start__DroneContainer
+        left: calc(50% - 125px)
+        width: 250px
+        height: 250px
+        
+    .Start__MarsAbsolute
+        width: 100%
+        height: 500px
+        bottom: -400px
+        
+    .Start__SliderScroll
+        width: 100%
+        
+    .TapToFly_F__Overlay
+        width: 100%
+        height: 30%
+        
+    .TapToFly_F__btn
+        top: auto
+        bottom: 30px
+        right: calc(50% - 46px)
+        transform: rotate(0deg)
+        
+    .TapToFly
+        flex-direction: column
+        
+    .TapToFly__Header
+        width: 100%
+        text-align: center
+        
+    .TapToFly__Fly
+        width: 100%
+        
+    .TapToFly_H__h2, .TapToFly_H__p
+        padding-left: 0
+        
+    .NewGen
+        flex-direction: column
+        
+    .NewGen__img, .NewGen__Text
+        width: 100%
+        
+    .NewGen__Text
+        padding: 60px 20px 60px 60px
+        
+    .NewGen-2
+        padding: 0 20px
+        align-items: center
+        text-align: center
+        background-image: none
+    
+    .NewGen-2__text--dark
+        font-size: 4rem
+        
+    .Journey__h2
+        font-size: 4rem
+        
+    .Footer__AbsoluteSpan
+        font-size: 6rem
+        
+    .Start__SliderScroll
+        flex-direction: column
+        justify-content: center
+
+       
+    .Start_S__Slide
+        text-align: center
+        order: -1
+        margin: 0 auto
+        
+    .Start_S-S__p
+        margin: 0 auto
+        
+    .Start_S__Bullets
+        transform: rotate(90deg)
+        margin: 0 auto
+        
+@include mw480
+    
+    .Start__Menu
+        top: 10px
+        
+    .Start_M__Container:last-child
+        flex-direction: column
+        align-items: flex-end
+        
+    a.Start_M-C__BuyNow
+        margin-right: 0
+        margin-bottom: 10px
+        
+    .Start
+        min-height: 700px
+        
+    .Start__MarsAbsolute
+        height: 300px
+        
+    .Start__DroneContainer
+        left: calc(50% - 80px)
+        width: 160px
+        height: 160px
+        
+    .Start_S__ScrollDown
+        display: none
+        
+        
+    .Journey
+        background-position: left 50% bottom 33%
+    .Journey__h2
+        font-size: 2.5rem
+        
+    .Footer__AbsoluteSpan
+        font-size: 4rem
+        
+        
+        
+        
+        
+        
+.pos-fixed
+    position: fixed
+    z-index: 8
+        
+.addMargin
+    padding-top: 650px
+        

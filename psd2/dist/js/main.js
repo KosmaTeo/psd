@@ -1,0 +1,1 @@
+var menuBtn=document.getElementById("hamburger");menuBtn.addEventListener("click",function(){document.getElementById("menu").classList.toggle("ShowMenu")});

@@ -1,0 +1,1 @@
+var Hamburger=document.getElementById("hamburger");Hamburger.addEventListener("click",function(){var e=document.getElementById("nav"),t=document.getElementById("top-bar"),a=document.getElementById("TapToFly");t.classList.toggle("pos-fixed"),e.classList.toggle("show"),a.classList.toggle("addMargin")});
